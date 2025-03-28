@@ -3,12 +3,12 @@
     "loading": "loading..."
   },
   "Navigation": {
-    "title": "Open-source Tap4 AI Tools Directory",
-    "discover": "Discover AI",
+    "title": "Website Building Guide - Tools for Beginners",
+    "discover": "Discover Tools",
+    "beginners": "Beginners Guide",
+    "tutorials": "Tutorials",
     "submit": "Submit",
-    "newtools": "New Tools",
-    "startup": "Startup",
-    "menu": "menu"
+    "menu": "Menu"
   },
   "Footer": {
     "title": "Open-source Tap4 AI Tools Directory",
@@ -164,22 +164,32 @@
   },
   "Metadata": {
     "home": {
-      "title": "Get your best AI Tools | Open-source Tap4 AI Tools Directory",
-      "description": "Tap4 AI Directory is a tool provides free AI Tools Directory. Get your favorite AI tools with Tap4 AI Directory, Tap4 AI Directory aims to collect all the AI tools and provide the best for users.",
-      "keywords": "Tap4 AI Directory"
+      "title": "Website Building Tools Guide | Building Websites Made Easy",
+      "description": "A comprehensive directory of website building tools for beginners. Find the best tools to create your own website with ease.",
+      "keywords": "website building tools, how to build a website, website building guide, beginners website tools"
     },
     "ai": {
-      "titleSubfix": "Tap4 AI Directory"
+      "titleSubfix": "Website Building Guide"
     },
     "explore": {
-      "title": "Best AI Tools Explore 2024 | Open-source Tap4 AI Tools Directory",
-      "titlePrefix": "Tap4 AI Directory Explore",
-      "titleSuffix": "Tap4 AI Directory",
-      "description": "Tap4 AI Directory is a tool provides free AI Tools Directory. Get your favorite AI tools with Tap4 AI Directory, Tap4 AI Directory aims to collect all the AI tools and provide the best for users.",
-      "keywords": "Tap4 AI Directory"
+      "title": "Best Website Building Tools 2024 | Building Websites Made Easy",
+      "titlePrefix": "Website Tools Directory",
+      "titleSuffix": "Website Building Guide",
+      "description": "Discover the best website building tools for beginners. Our directory helps you find the right tools to create your own website easily.",
+      "keywords": "website tools, cms platforms, website builders, hosting services"
+    },
+    "beginners": {
+      "title": "Beginners Guide to Website Building | Website Building Guide",
+      "description": "A complete guide for beginners starting their website building journey. Learn the basics and best practices for creating your first website.",
+      "keywords": "beginners website guide, how to build a website, website for beginners, first website"
+    },
+    "tutorials": {
+      "title": "Website Building Tutorials | Learn How to Build Websites",
+      "description": "Step-by-step tutorials for building different types of websites. From WordPress to ecommerce, learn how to create professional websites.",
+      "keywords": "website tutorials, how to build a website, wordpress tutorial, website building guide"
     },
     "submit": {
-      "title": "Submit your AI tool and get Get Traffic | Tap4 AI Directory"
+      "title": "Submit Your Website Building Tool | Website Building Guide"
     }
   }
 }

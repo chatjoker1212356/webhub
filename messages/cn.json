@@ -3,19 +3,17 @@
     "loading": "加载中..."
   },
   "Navigation": {
-    "title": "开源Tap4 AI工具目录",
-    "discover": "发现AI",
+    "title": "建站导航 - 新手建站工具指南",
+    "discover": "发现工具",
+    "beginners": "新手指南",
+    "tutorials": "教程",
     "submit": "提交",
-    "newtools": "新工具",
-    "startup": "创业公司",
     "menu": "菜单"
   },
   "Footer": {
-    "title": "开源Tap4 AI工具目录",
-    "subTitle": "发现2024年最佳AI工具，尽在Tap4 AI工具目录！",
+    "title": "建站导航 - 新手建站工具指南",
+    "subTitle": "发现2024年最佳建站工具，轻松创建属于自己的网站！",
     "support": "支持",
-    "tap4": "Tap4 AI",
-    "tattoo": "AI纹身生成器",
     "privacy": "隐私政策",
     "termsConditions": "条款和条件",
     "contactUs": "联系我们"
@@ -23,51 +21,51 @@
   "Faq": {
     "title": "常见问题",
     "1": {
-      "question": "Tap4 AI工具目录是什么？",
-      "answer": "Tap4 AI工具目录 - tap4.ai正在建立一个AI工具目录，帮助您获取您喜爱的AI工具。您可以在这里找到AI写作工具、AI营销工具、AI改写工具、AI SEO工具、AI学习工具、AI生成工具、AI研究工具、AI艺术工具、AI音乐工具、AI视频工具、AI编码工具、AI图片工具等等。"
+      "question": "建站导航是什么？",
+      "answer": "建站导航是一个为新手提供的建站工具目录，旨在帮助您获取您需要的建站工具。您可以在这里找到CMS平台、网站构建器、主机服务、域名服务、设计工具、模板与主题、SEO工具、分析工具、支付解决方案等各类建站相关工具。"
     },
     "2": {
-      "question": "如何在Tap4 AI工具目录中找到您的AI工具？",
-      "answer-1": "1. 打开tap4.ai。",
-      "answer-2": "2. 浏览Tap4 AI工具目录中的AI工具。",
-      "answer-3": "3. 单击您需要的AI工具，查看详情并访问它。"
+      "question": "如何在建站导航中找到您需要的建站工具？",
+      "answer-1": "1. 打开建站导航网站。",
+      "answer-2": "2. 浏览建站导航中的各类建站工具。",
+      "answer-3": "3. 单击您需要的建站工具，查看详情并访问它。"
     },
     "3": {
-      "question": "Tap4 AI工具目录的主要功能是什么？",
-      "answer-1": "1. 免费AI工具目录：在这里找到您喜爱的AI工具是免费的。",
-      "answer-2": "2. 创业公司列表：免费的创业公司列表供AI工具开发者使用。"
+      "question": "建站导航的主要功能是什么？",
+      "answer-1": "1. 免费建站工具目录：在这里找到您喜爱的建站工具是免费的。",
+      "answer-2": "2. 新手指南：为网站建设新手提供指导和帮助。"
     },
     "4": {
-      "question": "向Tap4 AI工具目录提交AI工具是免费的吗？",
-      "answer": "是的，目前是免费的。但您应该分享Tap4 AI工具目录的后链接！"
+      "question": "向建站导航提交建站工具是免费的吗？",
+      "answer": "是的，目前是免费的。但您应该分享建站导航的后链接！"
     },
     "5": {
-      "question": "Tap4 AI工具目录支持哪些AI工具类别？",
-      "answer": "我们将在稍后支持所有类型的AI工具。请稍等几天。"
+      "question": "建站导航支持哪些建站工具类别？",
+      "answer": "我们支持所有与网站建设相关的工具，包括CMS平台、网站构建器、主机服务、域名服务、设计工具、模板与主题、SEO工具、分析工具、支付解决方案、安全工具等。"
     },
     "6": {
-      "question": "Tap4 AI目录中AI工具的更新频率是多少？",
-      "answer": "AI工具列表将每天更新。"
+      "question": "建站导航中建站工具的更新频率是多少？",
+      "answer": "建站工具列表将会定期更新。"
     },
     "7": {
-      "question": "这里支持GPT-4o或Sora AI吗？",
-      "answer": "您可以在这里获取GPT-4o或Sora AI工具。这里有GPT-4o和Sora视频的介绍，您可以访问工具的网站。"
+      "question": "如何选择适合我的建站工具？",
+      "answer": "您可以根据您的需求和技术水平选择合适的建站工具。我们的网站提供了详细的工具描述和分类，帮助您做出更好的选择。"
     },
     "8": {
       "question": "故障排除",
-      "answer": "如果内容没有出现，请尝试使用其他浏览器，清除缓存。如果问题仍然存在，请联系我们：contact@6677.ai。"
+      "answer": "如果内容没有出现，请尝试使用其他浏览器，清除缓存。如果问题仍然存在，请联系我们。"
     },
     "9": {
-      "question": "Tap4 AI目录的内容是如何生成的？",
-      "answer": "AI工具的描述内容是由OpenAI的GPT-4o生成的。"
+      "question": "建站导航的数据来源是什么？",
+      "answer": "我们的建站工具数据来自于专业团队的精心筛选和用户提交的内容。我们确保所有工具都经过验证，为用户提供最有价值的信息。"
     },
     "10": {
-      "question": "AI工具的使用权是什么？",
-      "answer": "Tap4 AI工具目录只是AI工具的目录。AI工具的使用权基于AI工具的网站。"
+      "question": "我是建站新手，应该从哪里开始？",
+      "answer": "我们建议您先浏览我们的新手指南栏目，了解网站建设的基本流程。然后根据您的需求，选择合适的CMS平台或网站构建器开始您的建站之旅。"
     },
     "11": {
-      "question": "Tap4 AI目录的Web UI是开源的吗？",
-      "answer": "是的，我们将在GitHub（https://github.com/6677-ai/tap4-ai-webui）上开源Tap4 AI目录的Web UI。请给我们点星。"
+      "question": "建站导航的Web UI是开源的吗？",
+      "answer": "是的，我们的Web UI是基于开源项目构建的，您可以在GitHub上找到相关代码。"
     }
   },
   "FooterNavigation": {
@@ -118,10 +116,10 @@
     "goHome": "回到首页"
   },
   "Home": {
-    "title": "Tap4 AI - 探索最佳AI工具 2024",
-    "subTitle": "在Tap4 AI工具目录中获取您喜欢的AI工具。AI工具列表由GPT-4o每天更新。现在免费提交以增强您的SEO。",
-    "ai-navigate": "AI工具列表",
-    "exploreMore": "获取更多AI工具",
+    "title": "建站导航 - 新手建站工具指南 2024",
+    "subTitle": "发现2024年最佳建站工具，轻松创建属于自己的网站！现在可以免费提交您的建站工具。",
+    "ai-navigate": "建站工具列表",
+    "exploreMore": "获取更多建站工具",
     "checkDetail": "查看详情",
     "search": "搜索",
     "result": "搜索结果",
@@ -132,8 +130,8 @@
     "empty": "无数据"
   },
   "Submit": {
-    "title": "提交您的AI工具",
-    "subTitle": "提交您的AI工具并从Tap4 AI目录获取流量",
+    "title": "提交您的建站工具",
+    "subTitle": "提交您的建站工具并从建站导航获取流量",
     "website": "网站名称",
     "url": "网站URL",
     "submit": "提交",
@@ -159,27 +157,37 @@
     }
   },
   "Explore": {
-    "title": "发现2024年最佳AI工具",
-    "subTitle": "在Tap4 AI工具目录中找到您喜爱的AI工具。AI工具列表每天由GPT-4o更新。"
+    "title": "发现2024年最佳建站工具",
+    "subTitle": "在建站导航中找到您喜爱的建站工具。建站工具列表每天更新。"
   },
   "Metadata": {
     "home": {
-      "title": "获取您的最佳AI工具 | Tap4 AI目录",
-      "description": "Tap4 AI目录是一款提供免费AI工具目录的工具。通过Tap4 AI目录获取您喜爱的AI工具，Tap4 AI目录旨在收集所有AI工具并为用户提供最佳服务。",
-      "keywords": "Tap4 AI目录"
+      "title": "获取最佳建站工具 | 建站导航",
+      "description": "建站导航是一个为新手提供的建站工具目录。通过建站导航获取您需要的建站工具，助您轻松创建属于自己的网站。",
+      "keywords": "建站导航,建站工具,网站建设,新手建站"
     },
     "ai": {
-      "titleSubfix": "Tap4 AI目录"
+      "titleSubfix": "建站导航"
     },
     "explore": {
-      "title": "2024年最佳AI工具探索 | Tap4 AI目录",
-      "titlePrefix": "Tap4 AI目录探索",
-      "titleSuffix": "Tap4 AI目录",
-      "description": "Tap4 AI目录是一款提供免费AI工具目录的工具。通过Tap4 AI目录获取您喜爱的AI工具，Tap4 AI目录旨在收集所有AI工具并为用户提供最佳服务。",
-      "keywords": "Tap4 AI目录"
+      "title": "2024年最佳建站工具探索 | 建站导航",
+      "titlePrefix": "建站导航探索",
+      "titleSuffix": "建站导航",
+      "description": "建站导航是一个为新手提供的建站工具目录。通过建站导航获取您需要的建站工具，助您轻松创建属于自己的网站。",
+      "keywords": "建站导航,建站工具,网站建设,新手建站"
+    },
+    "beginners": {
+      "title": "新手建站指南 | 零基础学建站",
+      "description": "为网站建设新手提供的完整指南。学习创建您的第一个网站所需的基础知识和最佳实践。",
+      "keywords": "新手建站,如何建站,零基础建站,第一个网站"
+    },
+    "tutorials": {
+      "title": "建站教程中心 | 学习如何搭建网站",
+      "description": "提供各类网站建设的详细教程。从WordPress到电子商务，学习如何创建专业网站。",
+      "keywords": "建站教程,如何搭建网站,WordPress教程,建站指南"
     },
     "submit": {
-      "title": "提交您的AI工具并获取流量 | Tap4 AI目录"
+      "title": "提交您的建站工具并获取流量 | 建站导航"
     }
   }
 }
