@@ -27,6 +27,23 @@ const nextConfig = {
     ],
   },
   productionBrowserSourceMaps: false,
+  webpack: (config) => {
+    if (!config.optimization) {
+      config.optimization = {};
+    }
+    
+    if (!config.optimization.splitChunks) {
+      config.optimization.splitChunks = {};
+    }
+
+    config.optimization.splitChunks = {
+      ...config.optimization.splitChunks,
+      chunks: 'all',
+      maxSize: 20 * 1024 * 1024, // 20MB，低于Cloudflare的25MB限制
+    };
+
+    return config;
+  },
 };
 
 export default withNextIntl(nextConfig);

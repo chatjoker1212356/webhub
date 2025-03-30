@@ -1,8 +1,10 @@
 {
-  "crons": [
+  "headers": [
     {
-      "path": "/api/cron",
-      "schedule": "0 0 * * *"
+      "source": "/:path*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
     }
   ]
 }
