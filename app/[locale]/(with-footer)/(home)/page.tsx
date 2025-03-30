@@ -6,7 +6,6 @@ import { CircleChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
 import { RevalidateOneHour } from '@/lib/constants';
-import Faq from '@/components/Faq';
 import SearchForm from '@/components/home/SearchForm';
 import WebNavCardList from '@/components/webNav/WebNavCardList';
 
@@ -36,22 +35,29 @@ export const revalidate = RevalidateOneHour;
 export default async function Page() {
   const supabase = createClient();
   const t = await getTranslations('Home');
+
+  // 确保在服务器端获取完整的数据
   const [{ data: categoryList }, { data: navigationList }] = await Promise.all([
     supabase.from('navigation_category').select(),
-    supabase.from('web_navigation').select().order('collection_time', { ascending: false }).limit(12),
+    supabase.from('web_navigation').select('*').order('collection_time', { ascending: false }).limit(12),
   ]);
 
   return (
     <div className='relative w-full'>
       <div className='relative mx-auto w-full max-w-pc flex-1 px-3 lg:px-0'>
+        {/* 头部区域 */}
         <div className='my-5 flex flex-col text-center lg:mx-auto lg:my-10 lg:gap-1'>
           <h1 className='text-2xl font-bold text-white lg:text-5xl'>{t('title')}</h1>
           <h2 className='text-balance text-xs font-bold text-white lg:text-sm'>{t('subTitle')}</h2>
         </div>
+
+        {/* 搜索区域 */}
         <div className='flex w-full items-center justify-center'>
           <SearchForm />
         </div>
-        <div className='mb-10 mt-5'>
+
+        {/* 分类标签区域 */}
+        <div className='my-4'>
           <TagList
             data={categoryList!.map((item) => ({
               id: String(item.id),
@@ -60,18 +66,30 @@ export default async function Page() {
             }))}
           />
         </div>
-        <div className='flex flex-col gap-5'>
-          <h2 className='text-center text-[18px] lg:text-[32px]'>{t('ai-navigate')}</h2>
-          <WebNavCardList dataList={navigationList!} />
+
+        {/* 工具列表区域 */}
+        <div className='flex flex-col gap-5 rounded-2xl bg-gray-900 p-6 shadow-lg'>
+          <h2 className='mb-4 text-center text-2xl font-bold text-white'>{t('ai-navigate')}</h2>
+
+          {/* 工具卡片列表 */}
+          {navigationList && navigationList.length > 0 ? (
+            <WebNavCardList dataList={navigationList} />
+          ) : (
+            <div className='flex items-center justify-center py-10'>
+              <p className='text-gray-400'>正在加载工具列表...</p>
+            </div>
+          )}
+
+          {/* 更多工具按钮 */}
           <Link
             href='/explore'
-            className='mx-auto mb-5 flex w-fit items-center justify-center gap-5 rounded-[9px] border border-white p-[10px] text-sm leading-4 hover:opacity-70'
+            className='mx-auto mb-2 mt-6 flex w-fit items-center justify-center gap-3 rounded-xl bg-blue-700 px-6 py-3 font-medium text-white shadow-md transition-colors hover:bg-blue-600'
           >
             {t('exploreMore')}
-            <CircleChevronRight className='mt-[0.5] h-[20px] w-[20px]' />
+            <CircleChevronRight className='h-5 w-5' />
           </Link>
         </div>
-        <Faq />
+
         <ScrollToTop />
       </div>
     </div>

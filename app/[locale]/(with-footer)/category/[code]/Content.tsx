@@ -1,4 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
+
+'use client';
+
+import { useEffect, useState } from 'react';
 import { WebNavigation } from '@/db/supabase/types';
 import { useTranslations } from 'next-intl';
 
@@ -23,6 +27,31 @@ export default function Content({
   route: string;
 }) {
   const t = useTranslations('Category');
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [items, setItems] = useState<WebNavigation[]>([]);
+
+  useEffect(() => {
+    if (navigationList && navigationList.length > 0) {
+      console.log(`分类[${headerTitle}]加载了${navigationList.length}个项目`);
+      const processedItems = navigationList.map((item) => {
+        let formattedCategory: string[] = [];
+        if (Array.isArray(item.category_name)) {
+          formattedCategory = item.category_name;
+        } else if (item.category_name) {
+          formattedCategory = [item.category_name as string];
+        }
+        return {
+          ...item,
+          category_name: formattedCategory,
+        };
+      });
+      setItems(processedItems);
+    } else {
+      console.log(`分类[${headerTitle}]未找到项目`);
+      setItems([]);
+    }
+    setIsLoaded(true);
+  }, [navigationList, headerTitle]);
 
   return (
     <>
@@ -44,28 +73,45 @@ export default function Content({
         </div>
       </div>
       <div className='mt-3'>
-        {navigationList && !!navigationList?.length ? (
-          <>
-            <div className='grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4'>
-              {navigationList.map((item) => (
-                <WebNavCard key={item.id} {...item} />
-              ))}
-            </div>
-            <div className='my-5 flex items-center justify-center lg:my-10'>
-              <BasePagination
-                currentPage={currentPage}
-                total={total}
-                pageSize={pageSize}
-                route={route}
-                subRoute='/page'
-              />
-            </div>
-          </>
-        ) : (
-          <div className='mb-3 lg:mb-5'>
-            <Empty title={t('empty')} />
-          </div>
-        )}
+        {(() => {
+          if (!isLoaded) {
+            return (
+              <div className='flex items-center justify-center py-10'>
+                <div className='flex animate-pulse flex-col items-center'>
+                  <div className='mb-2 h-4 w-28 rounded bg-gray-700' />
+                  <div className='h-2 w-20 rounded bg-gray-600' />
+                </div>
+              </div>
+            );
+          }
+
+          if (!items || items.length === 0) {
+            return (
+              <div className='mb-3 lg:mb-5'>
+                <Empty title={t('empty')} />
+              </div>
+            );
+          }
+
+          return (
+            <>
+              <div className='grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4'>
+                {items.map((item) => (
+                  <WebNavCard key={item.id} {...item} />
+                ))}
+              </div>
+              <div className='my-5 flex items-center justify-center lg:my-10'>
+                <BasePagination
+                  currentPage={currentPage}
+                  total={total}
+                  pageSize={pageSize}
+                  route={route}
+                  subRoute='/page'
+                />
+              </div>
+            </>
+          );
+        })()}
       </div>
     </>
   );

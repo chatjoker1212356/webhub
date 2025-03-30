@@ -39,6 +39,6 @@ CREATE TABLE IF NOT EXISTS public.web_navigation (
   collection_time TIMESTAMPTZ,
   star_rating INTEGER,
   tag_name TEXT,
-  category_name TEXT
+  category_name TEXT[] -- 修改为文本数组，支持多分类
 ) TABLESPACE pg_default;
 

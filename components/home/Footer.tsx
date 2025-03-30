@@ -33,32 +33,32 @@ export default function Footer() {
 
   const SupportLinks = [
     {
-      title: 'Chat o1',
-      href: 'https://chat4o.ai/',
+      title: 'WordPress',
+      href: 'https://wordpress.org/',
     },
     {
-      title: 'Grok Image Generator',
-      href: 'https://grokimagegenerator.net/',
+      title: 'Wix',
+      href: 'https://www.wix.com/',
     },
     {
-      title: 'Flux AI Image Generator',
-      href: 'https://flux-ai.io/',
+      title: 'Shopify',
+      href: 'https://www.shopify.com/',
     },
     {
-      title: 'Photo to Video AI',
-      href: 'https://dreammachineai.online/',
+      title: 'Squarespace',
+      href: 'https://www.squarespace.com/',
     },
     {
-      title: 'Flux Pro Image Generator',
-      href: 'https://flux-pro.net/',
+      title: 'Webflow',
+      href: 'https://webflow.com/',
     },
     {
-      title: t('tap4'),
-      href: 'https://tap4.ai/',
+      title: 'GoDaddy',
+      href: 'https://www.godaddy.com/',
     },
     {
-      title: t('tattoo'),
-      href: 'https://tattooai.design/',
+      title: 'Hostinger',
+      href: 'https://www.hostinger.com/',
     },
   ];
 
@@ -77,7 +77,10 @@ export default function Footer() {
     <footer className='w-full bg-[#15141A]'>
       <div className='mx-auto flex min-h-[251px] max-w-pc flex-col items-center justify-between p-10 pb-5 lg:h-[180px] lg:flex-row lg:px-0 lg:pb-10'>
         <div className='flex flex-col items-center lg:items-stretch'>
-          <p className='text-xl font-bold text-white lg:h-8 lg:text-[32px]'>{t('title')}</p>
+          <div className='mb-2 flex items-center'>
+            <span className='text-xl font-bold text-white lg:text-2xl'>WebBuild</span>
+            <span className='text-xl font-bold text-blue-400 lg:text-2xl'>Guide</span>
+          </div>
           <p className='text-xs'>{t('subTitle')}</p>
         </div>
         <div className='mt-5 flex flex-col items-center gap-y-5 lg:mt-0 lg:flex-row lg:items-stretch lg:gap-x-10'>
@@ -110,6 +113,9 @@ export default function Footer() {
             </a>
           </div>
         </div>
+      </div>
+      <div className='pb-4 text-center text-xs text-gray-500'>
+        © {new Date().getFullYear()} WebBuildGuide. All rights reserved.
       </div>
     </footer>
   );

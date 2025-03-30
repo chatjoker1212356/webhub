@@ -3,6 +3,7 @@ export const NAV_LINKS = [
     code: 'discover',
     href: '/explore',
   },
+  /* 暂时隐藏这些页面，因为没有实质内容
   {
     code: 'beginners',
     href: '/beginners',
@@ -11,6 +12,7 @@ export const NAV_LINKS = [
     code: 'tutorials',
     href: '/tutorials',
   },
+  */
   {
     code: 'submit',
     href: '/submit',

@@ -2,48 +2,43 @@
 
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { createClient } from '@/db/supabase/client';
+import { getWebsitesByCategory } from '@/db/supabase/helper/category_helper';
 
 import { InfoPageSize, RevalidateOneHour } from '@/lib/constants';
 
 import Content from './Content';
 
-export const revalidate = RevalidateOneHour * 6;
+// 降低缓存时间，使页面更快反映数据变化
+export const revalidate = RevalidateOneHour * 1;
 
 export async function generateMetadata({ params }: { params: { code: string } }): Promise<Metadata> {
-  const supabase = createClient();
-  const { data: categoryList } = await supabase.from('navigation_category').select().eq('name', params.code);
+  const { categoryInfo } = await getWebsitesByCategory(params.code, 1);
 
-  if (!categoryList || !categoryList[0]) {
+  if (!categoryInfo) {
     notFound();
   }
 
   return {
-    title: categoryList[0].title,
+    title: categoryInfo.title,
   };
 }
 
 export default async function Page({ params }: { params: { code: string } }) {
-  const supabase = createClient();
-  const [{ data: categoryList }, { data: navigationList, count }] = await Promise.all([
-    supabase.from('navigation_category').select().eq('name', params.code),
-    supabase
-      .from('web_navigation')
-      .select('*', { count: 'exact' })
-      .eq('category_name', params.code)
-      .range(0, InfoPageSize - 1),
-  ]);
+  console.log('分类页面加载:', params.code);
 
-  if (!categoryList || !categoryList[0]) {
+  // 使用统一的辅助函数获取数据
+  const { items, total, categoryInfo } = await getWebsitesByCategory(params.code, InfoPageSize);
+
+  if (!categoryInfo) {
     notFound();
   }
 
   return (
     <Content
-      headerTitle={categoryList[0]!.title || params.code}
-      navigationList={navigationList!}
+      headerTitle={categoryInfo.title || params.code}
+      navigationList={items}
       currentPage={1}
-      total={count!}
+      total={total}
       pageSize={InfoPageSize}
       route={`/category/${params.code}`}
     />
