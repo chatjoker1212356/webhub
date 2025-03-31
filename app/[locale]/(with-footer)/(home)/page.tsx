@@ -13,14 +13,27 @@ import { TagList } from './Tag';
 
 const ScrollToTop = dynamic(() => import('@/components/page/ScrollToTop'), { ssr: false });
 
+/**
+ * 确保 URL 包含协议前缀
+ * @param url 输入的 URL 字符串
+ * @returns 格式化后的 URL 字符串
+ */
+const ensureUrlProtocol = (url: string): string => {
+  if (!url) return 'https://webmark.site';
+  if (url.startsWith('http://') || url.startsWith('https://')) return url;
+  return `https://${url}`;
+};
+
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({
     locale,
     namespace: 'Metadata.home',
   });
 
+  const siteUrl = ensureUrlProtocol(process.env.NEXT_PUBLIC_SITE_URL || 'webmark.site');
+
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL as string),
+    metadataBase: new URL(siteUrl),
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
